@@ -1,6 +1,6 @@
-#THANOS.PY
+# THANOS.PY
 ---------------------------------------------
-##Steps
+## Steps
 - install:
     - python3.8
     - tkinter
