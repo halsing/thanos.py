@@ -9,6 +9,9 @@ from thanos import ThanosGlove
 
 
 class ThanosMind(tk.Tk):
+    """
+    Main container for all frames include base setings and frames names
+    """
 
     length_del_files = 0
     all_files = []
@@ -39,6 +42,9 @@ class ThanosMind(tk.Tk):
 
 
 class StartPage(tk.Frame):
+    """
+    First page just show the button to start
+    """
     def __init__(self, parent, controler):
         tk.Frame.__init__(self, parent)
         label = tk.Label(self, text="StartPage")
@@ -57,6 +63,9 @@ class StartPage(tk.Frame):
 
 
 class DirnamePage(tk.Frame):
+    """
+    This frame get value from user input about path to directory
+    """
     def __init__(self, parent, controler):
         tk.Frame.__init__(self, parent)
         self.controler = controler
@@ -92,6 +101,12 @@ class DirnamePage(tk.Frame):
 
 
 class LoadingPage(tk.Frame):
+    """
+    After load button all process will start. 
+    At first, program will get all files from current directory 
+    and all subdirectories. After that, thanos.py will remove randomly 
+    half of files. 
+    """
     def __init__(self, parent, controler):
         tk.Frame.__init__(self, parent)
         self.controler = controler
@@ -117,11 +132,14 @@ class LoadingPage(tk.Frame):
 
 
 class FinalPage(tk.Frame):
+    """
+    Just a final page
+    """
     def __init__(self, parent, controler):
         tk.Frame.__init__(self, parent)
         label = tk.Label(self, text="StartPage")
         label.pack()
-        
+
         exit_button = ttk.Button(
             self, 
             text="Exit", 
