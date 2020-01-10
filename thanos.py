@@ -49,7 +49,7 @@ class ThanosGlove:
 
         list_length = len(list_of_files)
 
-        for n_time in range(round(list_length/2)):
+        for n_time in range(round(list_length / 2)):
             del_file = random.choice(list_of_files)
             os.remove(del_file)
             list_of_files.remove(del_file)
